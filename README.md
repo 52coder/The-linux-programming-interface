@@ -20,6 +20,21 @@ p530页 章节30.2.1
 原文“条件变量的数据类型是pthread_count_t” 
 更改为“条件变量的数据类型是pthread_cond_t.
 
+p558页 源代码thread_cleanup.c
+main函数在全局变量赋值前应使用pthread_mutex_lock,添加后的代码如下：
+```
+        s = pthread_mutex_lock(&mtx);
+        if (s != 0)
+            errExitEN(s, "pthread_mutex_lock");
+ 
+
+        glob = 1;
+ 
+        s = pthread_mutex_unlock(&mtx);
+        if (s != 0)
+            errExitEN(s, "pthread_mutex_unlock");
+```
+
 
 
 
