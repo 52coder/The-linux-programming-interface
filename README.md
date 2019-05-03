@@ -35,7 +35,6 @@ main函数在全局变量赋值前应使用pthread_mutex_lock,添加后的代码
             errExitEN(s, "pthread_mutex_unlock");
 ```
 
-
 p730页：
 原文：
 如read()可能hiu被一个向管道写入数据的信号处理器中断。
@@ -43,5 +42,11 @@ p730页：
 “For example, the read() might be interrupted by a signal handler that writes data to the pipe. ”
 更正hiu--->会
 看到这里我实在无力吐槽了，好好的一本书被翻译成天书了，翻译完就跑，也没人维护勘误表，你起码英文拼音拼对呀.
+
+p745页：
+原文：
+将传给tee命名的file参数设置为一个FIFO可以让两个进程同时读取tee产生的两份数据。
+更正：
+命名--->命令
 
 
