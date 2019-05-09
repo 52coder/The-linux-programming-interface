@@ -61,3 +61,32 @@ p768页：
 p772页：
 因此mgsp参数--->因此msgp参数
 
+p775页：
+书中给出的svmsg_receive的例子显示存在错误。
+正确的显示如下：
+```
+root@52coder:~/tlpi-dist/svmsg# ./svmsg_receive -t 10 0
+Received: type=10; length=22; body=I see and I remember.
+
+root@52coder:~/tlpi-dist/svmsg# ./svmsg_receive -t 20 0
+Received: type=20; length=21; body=I hear and I forget.
+
+root@52coder:~/tlpi-dist/svmsg# ./svmsg_receive -t 30 0
+Received: type=30; length=23; body=I do and I understand.
+
+root@52coder:~/tlpi-dist/svmsg# ipcs
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+0x00000000 0          root       600        0            0           
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems     
+
+root@52coder:~/tlpi-dist/svmsg# 
+
+```
+
