@@ -61,4 +61,13 @@ p768页：
 p772页：
 因此mgsp参数--->因此msgp参数
 
+p785页：
+中文版：
+服务器被设计成并发地处理请求。并发服务器设计最好像程序清单44-7中所做的那样采用迭代式设计，因为需要避免出现因一个客户端请求一个大文件而导致所有其他客户端请求等待的情况。
+英文原文：
+```
+“The server is designed to handle requests concurrently. A concurrent server design is preferable to the iterative design employed in Example 44-7 (page 912), since we want to avoid the possibility that a client request for a large file would cause all other client requests to wait.”
+```
 
+个人认为正确的翻译如下：
+文件服务器被设计成并发的处理请求。并发服务器在设计上优于迭代式服务(例子见44-7 912页)，因为并发服务能够避免因一个客户请求一个大文件而导致其它客户请求等待的情况。
